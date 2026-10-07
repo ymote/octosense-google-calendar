@@ -1,0 +1,72 @@
+# Google Calendar for OctoSense
+
+English | [简体中文](README.zh-CN.md)
+
+A **macOS development preview** for viewing Google Calendar, keeping event
+drafts, reviewing edits and discussing an event with your configured assistant.
+Publisher: **ymote**. App ID: `org.octosense.samples.googlecalendar`; version: `0.1.0`.
+This is an independent sample, not a Google product.
+
+It requires the connected-app services in [OctoSense #347](https://github.com/OctoSense-org/OctoSense/pull/347)
+and the admission/tool contract in [App Hub #119](https://github.com/OctoSense-org/OctoSense-App-Hub/pull/119).
+Submission for review does not mean catalog acceptance or availability in an
+ordinary released OctoSense build. **Live Google login, reads, writes and physical
+approval have not been validated for this sample.** Android Google authorization
+is missing; Android, Linux and Windows are not listed as supported platforms.
+
+## Use the app
+
+After a reviewer accepts the signed bundle, install it through App Hub in a
+compatible macOS OctoSense build. The host operator must configure a Google OAuth
+client outside this repository; enter credentials only in the host/provider flow.
+
+1. Open **Account → Connect Google**, complete consent and choose a calendar.
+2. Use **Refresh** to sync. A failed sync keeps the last complete cached agenda.
+3. Select **+ Event** or an event's **Edit** action. Set both dates/times and an
+   explicit IANA timezone; **Keep draft** retains unfinished work locally.
+4. **Review & Save** opens a host-owned review of the exact event. Check the
+   account, calendar, time and content before approving. Conflicts keep your
+   draft and require reviewing the latest event instead of overwriting it.
+5. **Glance** publishes the selected event for 24 hours without a notification.
+   Its **Open Calendar** action returns to that event in this app.
+6. **Chat** sends the selected event context and your question to your configured
+   model after host consent. The assistant can read through four private tools;
+   it **cannot book, create or edit events**. Apply suggestions in the editor.
+
+Recurring series show their original start; occurrence expansion, recurrence
+editing and attendee invitations are outside this version. Glance-card and
+full-app chats have not been verified to share conversation history.
+
+## Evidence and development
+
+The executable source, agent instructions, tool declarations and original
+screenshots are preserved from the [immutable App Design Flow sample](https://github.com/OctoSense-org/OctoScript-App-Design-Flow/tree/5b0fde7ed0e9e4131751d16f55ba3d8a3180dd95/examples/connected-apps/google-calendar).
+Historical macOS tests covered eight signed-install/provider-fixture journeys,
+six Glance/routing journeys, real DeepSeek advice about synthetic events, and a
+36-cycle/620-second native soak. These are **synthetic Calendar provider tests**,
+not live Google validation. Original captures and receipts are in [evidence/](evidence/);
+[provenance and limitations](ACCEPTANCE.md) preserve their original identities.
+
+To verify a signed release, put the compatible App Hub tools on `PATH` and run
+from this repository (Python reads only the published public key):
+
+```sh
+CALENDAR_PUBLISHER_KEY="$(python3 -c 'import json; print(json.load(open("publisher.json"))["public_key"])')"
+hub check bundle --publisher-key "ymote=$CALENDAR_PUBLISHER_KEY"
+mkdir -p build
+hub scan bundle --publisher-key "ymote=$CALENDAR_PUBLISHER_KEY" --packet build/review.json
+```
+
+Do not stamp or edit a release before verifying it. For development, use a
+separate editable copy and follow the [Hub publishing sequence](https://github.com/OctoSense-org/OctoSense-App-Hub/blob/main/docs/PUBLISHING.md):
+restamp changed bytes, check the unsigned copy, then sign with your own publisher
+key and verify again. `--allow-unsigned` only permits genuinely unsigned local
+bundles; it does not trust an unknown signature or bypass installation checks.
+Only `bundle/` is submitted. [Review answers](review/ANSWERS.md)
+cover all eight scanner questions. Runtime-dependent reproduction commands stay
+in the [original acceptance document](https://github.com/OctoSense-org/OctoScript-App-Design-Flow/blob/5b0fde7ed0e9e4131751d16f55ba3d8a3180dd95/examples/connected-apps/google-calendar/ACCEPTANCE.md).
+
+Read the [privacy policy](PRIVACY.md) before connecting an account or using AI.
+Report problems through [GitHub issues](https://github.com/ymote/octosense-google-calendar/issues)
+without account data, tokens or private event details. Licensed under
+[Apache-2.0](LICENSE); see [NOTICE](NOTICE) for attribution.

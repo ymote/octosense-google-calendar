@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "origin_repository": "https://github.com/OctoSense-org/OctoScript-App-Design-Flow",
+  "origin_commit": "5b0fde7ed0e9e4131751d16f55ba3d8a3180dd95",
+  "origin_directory": "examples/connected-apps/google-calendar",
+  "historical_runtime_repository": "https://github.com/OctoSense-org/OctoSense",
+  "historical_runtime_commit": "26b9fe9fa51ef3c1fe6f833743144a2e12cf54e3",
+  "copied_source_sha256": {
+    "bundle/AGENT.md": "63f2149c37831a183f8d951fe9c713503e6d6b16a2c1d9a9a69c8ee31aab3150",
+    "bundle/assets/icon.svg": "5f4976fe46338bdfa4af1276afa2d0af625d195cc3aead9ba997212c79706486",
+    "bundle/listing.json": "adaffd2cd0568762e59dccadbb31a94a0fdcefee908691a3f33ccf099ef7b7bb",
+    "bundle/main.splash": "7292894f1576d2283726eeafdb79742bd6fe6fb9a651cb1646462bbde4185ff0",
+    "bundle/manifest.json": "7f66db331665c8cc74de07e4f9c692cd66619e844739b67c4aa996e9cb7210ef",
+    "bundle/screenshots/01-local-draft.png": "268bdd77e2d4bf4a984e4c4063b5126a73d9554796551b9c131d97b00eeeac72",
+    "bundle/screenshots/02-notes.png": "c992b34426bdc98da48f49c37ebcec13c8cb9954e98e890f0ed62314c5893f7d",
+    "bundle/screenshots/03-host-required.png": "ba7236e0353fca886f81a0b9d7257731c24a1c2216d4cab67be217499b128dae",
+    "bundle/screenshots/04-glance-template.png": "16a97550829f7bc838612dcf67ac9788b77c5809bd1267530954f53230b522fc",
+    "bundle/tools.json": "06c2711440f9ebd99629112ed676c2335ad4ad3e03eac50030a3dd60d3510c56",
+    "evidence/02-host-create-review.png": "55e6473c6692f11ee2818887a1ed50e8f5005ae80145bb6f3943d40dd255d495",
+    "evidence/04-restored-glance-without-open-app.png": "d10b0418d2bc0b031412ed6d901be831423e000fcbcad2a3c9c1f17a007e60b4",
+    "evidence/05-cold-exact-event-route.png": "7efad1063e02c4f656af26a69002527464c3f857790dbfa547ab4d5016bebde4",
+    "evidence/06-agent-consent.png": "dafb3acb3db04767d5006ce9dc917e60c87726cff6da9bdaadd147c259d0c1dc",
+    "evidence/07-real-advisory-model-answer.png": "7d9069db5cc3016497f29807454349c20e4627e2d69b288d751bda0bcf8c61be",
+    "evidence/07-visible-conflict-error.png": "3b9bd4dcd494513947fe6e4182b3b1a2e8b2b0a2248ed0a380fbfffc42a7159b",
+    "evidence/08-offline-restart-cached-agenda.png": "3c387cc5c447ce84a90c3330952c521684d09e65b193c18f493a71a0144f2678",
+    "evidence/09-soak-exact-review.png": "938e4efecefe83545d5067577a1a698d1b2076a36fed252db8950646e590d348",
+    "evidence/10-soak-conflict.png": "4d3780d7b7832a7cef380dffdbf764a9a38a29a12ffeee230cf6d574298e7f97",
+    "evidence/11-soak-final-agenda.png": "0e99ec6282abce59720bf6d291c4aa7a5222e784e56c3e0be2a37c96b2afa003",
+    "evidence/acceptance.json": "041ba57905270dd59367a796a4b680c3490d5dadc0db8f2e7604b869ac25eb69",
+    "evidence/soak.json": "119adbf442a37cc2aca7e3b8d1570c868a67319ece3256723a35d3b044d0c028"
+  },
+  "intentional_bundle_changes": [
+    "bundle/listing.json: publisher, support, privacy URL and preview wording",
+    "bundle/manifest.json: restamped integrity only; original app ID/version/functional contract preserved"
+  ],
+  "historical_evidence_notice": "Evidence files preserve their original source/executable/bundle hashes; they do not certify a new publisher signature or the changed listing digest."
+}

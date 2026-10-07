@@ -1,0 +1,19 @@
+Google Calendar for OctoSense
+Copyright 2026 The OctoSense Authors
+
+Published by ymote as an independent App Hub development preview.
+Licensed under the Apache License, Version 2.0; see LICENSE.
+
+The functional bundle and public synthetic acceptance evidence originate from:
+  OctoSense-org/OctoScript-App-Design-Flow
+  commit 5b0fde7ed0e9e4131751d16f55ba3d8a3180dd95
+  examples/connected-apps/google-calendar/
+
+Publisher listing metadata and standalone documentation were added for this
+repository. Original authorship and historical evidence identities are retained.
+The calendar SVG is the sample's original artwork. No Noto fonts or other
+separately licensed Flow example assets were copied into this repository.
+
+Google and Google Calendar are names of their respective owner. This independent
+sample is not endorsed by Google. Host/runtime dependencies are not bundled here
+and retain their own licenses.
