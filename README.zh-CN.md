@@ -8,8 +8,8 @@
 这是独立示例应用，不是 Google 官方产品。
 
 请使用 [OctoSense desktop-v0.1.0-beta.2 macOS Apple Silicon 预览版](https://github.com/OctoSense-org/OctoSense/releases/tag/desktop-v0.1.0-beta.2)。
-之前的签名版本 `0.1.0` 已进入官方 App Hub 目录，首次收录为
-[目录序号 7，App Hub #125](https://github.com/OctoSense-org/OctoSense-App-Hub/pull/125)。
+签名版本 `0.1.1` 已进入官方 App Hub 目录
+（[目录序号 10，App Hub #133](https://github.com/OctoSense-org/OctoSense-App-Hub/pull/133)）。
 **本示例尚未验证真实 Google 登录、读取、写入及人工物理确认。**
 Android Google 授权适配尚未实现；本次不宣称支持 Android、Linux 或 Windows。
 
@@ -17,7 +17,7 @@ Android Google 授权适配尚未实现；本次不宣称支持 Android、Linux 
 
 在 OctoSense 中打开 **App Hub → Search**，搜索 **Google Calendar**，审阅权限后
 依次点击 **Get → Install → Open**。连接账户前也可先准备本地日程草稿。
-已签名 0.1.1 更新仍需独立目录准入；`v0.1.0` 标签保持不变。
+`v0.1.1` 及之前的 `v0.1.0` 标签保持不变。
 
 使用 Google 服务前，宿主维护者须在仓库外配置 Google OAuth 客户端，参见
 [版本化配置指南](https://github.com/OctoSense-org/OctoSense/blob/desktop-v0.1.0-beta.2/crates/oauth-service/README.md)。凭据只在宿主或 Google 授权界面输入，无需另建 OctoSense 账户。
@@ -71,3 +71,6 @@ hub scan bundle --publisher-key "ymote=$CALENDAR_PUBLISHER_KEY" --packet build/r
 连接账号或使用 AI 前请阅读[隐私说明](PRIVACY.zh-CN.md)。通过
 [GitHub issues](https://github.com/ymote/octosense-google-calendar/issues)反馈问题时，
 不要提交账号资料、令牌或私人日程。采用 [Apache-2.0](LICENSE)；署名见 [NOTICE](NOTICE)。
+
+[收录后目录记录](review/CATALOG-0.1.1.json) 验证默认公开目录、签名包与列表资源。
+它只增加发布证据，不增加原生、模型或真实服务验收声明。标签中的发布记录仍保留签名时的历史状态。

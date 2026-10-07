@@ -1,0 +1,87 @@
+{
+  "schema": 1,
+  "result": "pass",
+  "checked_at_utc": "2026-10-07T07:19:32.352387+00:00",
+  "default_public_base": "https://raw.githubusercontent.com/OctoSense-org/OctoSense-App-Hub/main/",
+  "sequence": 10,
+  "default_anchor_signature_verified": true,
+  "existing_keys_and_previous_entries_unchanged": true,
+  "catalog_bytes_equal_verified_candidate": true,
+  "not_verified": [
+    "new native UI or model execution",
+    "live provider reads/writes",
+    "physical approval",
+    "Android"
+  ],
+  "app": {
+    "app_id": "org.octosense.samples.googlecalendar",
+    "latest_version": "0.1.1",
+    "bundle_digest": "700134563765275dd272ef49587e4e473737a84f8c15538fb96a419c178c7143",
+    "source": {
+      "repository": "https://github.com/ymote/octosense-google-calendar",
+      "commit_url": "https://github.com/ymote/octosense-google-calendar/commit/d79d98960642a7e368b9d0f2be8943dcec2bcd95"
+    },
+    "signed_pack_matches_admitted_artifact": true,
+    "index_matches_catalog": true,
+    "manifest_icon_and_all_screenshots_match": true
+  },
+  "requests": [
+    {
+      "path": "catalog.json",
+      "status": 200,
+      "sha256": "18276886c528dfe7e55b231c1b70771a92aea9ac074c5991fff9fa4abc0a30bf",
+      "bytes": 59790
+    },
+    {
+      "path": "artifacts/org.octosense.samples.googlecalendar-0.1.1.bundle.pack.json",
+      "status": 200,
+      "sha256": "150ecdf8be79a6318db32bde30bfb7b01dc53335934dea73b72b14d359513ec4",
+      "bytes": 1357823
+    },
+    {
+      "path": "index/org.octosense.samples.googlecalendar-0.1.1.json",
+      "status": 200,
+      "sha256": "cc17322224406f64216c6d161f6c582e7961be5a5b7921ef9d7a2b7686d83a01",
+      "bytes": 7147
+    },
+    {
+      "path": "artifacts/org.octosense.samples.googlecalendar-0.1.1.bundle/manifest.json",
+      "status": 200,
+      "sha256": "500cd1957ae4e8bf3a55b08dc69283878fc93663f982639e240eb522be1177ce",
+      "bytes": 1038
+    },
+    {
+      "path": "artifacts/org.octosense.samples.googlecalendar-0.1.1.bundle/assets/icon.svg",
+      "status": 200,
+      "sha256": "5f4976fe46338bdfa4af1276afa2d0af625d195cc3aead9ba997212c79706486",
+      "bytes": 323
+    },
+    {
+      "path": "artifacts/org.octosense.samples.googlecalendar-0.1.1.bundle/screenshots/01-local-draft.png",
+      "status": 200,
+      "sha256": "268bdd77e2d4bf4a984e4c4063b5126a73d9554796551b9c131d97b00eeeac72",
+      "bytes": 132513
+    },
+    {
+      "path": "artifacts/org.octosense.samples.googlecalendar-0.1.1.bundle/screenshots/02-notes.png",
+      "status": 200,
+      "sha256": "c992b34426bdc98da48f49c37ebcec13c8cb9954e98e890f0ed62314c5893f7d",
+      "bytes": 140141
+    },
+    {
+      "path": "artifacts/org.octosense.samples.googlecalendar-0.1.1.bundle/screenshots/03-host-required.png",
+      "status": 200,
+      "sha256": "ba7236e0353fca886f81a0b9d7257731c24a1c2216d4cab67be217499b128dae",
+      "bytes": 104599
+    },
+    {
+      "path": "artifacts/org.octosense.samples.googlecalendar-0.1.1.bundle/screenshots/04-glance-template.png",
+      "status": 200,
+      "sha256": "16a97550829f7bc838612dcf67ac9788b77c5809bd1267530954f53230b522fc",
+      "bytes": 603620
+    }
+  ],
+  "immutable_release_tag": "v0.1.1",
+  "tagged_bundle_and_release_assets_unchanged": true,
+  "official_merge_commit_url": "https://github.com/OctoSense-org/OctoSense-App-Hub/commit/b8750d92c41365c4ff80f9baef077275a15b020b"
+}
