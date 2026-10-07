@@ -7,16 +7,19 @@
 `org.octosense.samples.googlecalendar`，版本为 `0.1.0`。
 这是独立示例应用，不是 Google 官方产品。
 
-应用依赖 [OctoSense #347](https://github.com/OctoSense-org/OctoSense/pull/347)
-的共享服务和 [App Hub #119](https://github.com/OctoSense-org/OctoSense-App-Hub/pull/119)
-的准入及工具映射能力。提交审核不代表已进入应用目录，也不代表普通发行版已支持。
+请使用 [OctoSense desktop-v0.1.0-beta.2 macOS Apple Silicon 预览版](https://github.com/OctoSense-org/OctoSense/releases/tag/desktop-v0.1.0-beta.2)。
+本应用签名版本 `0.1.0` 已进入官方 App Hub 目录，首次收录为
+[目录序号 7，App Hub #125](https://github.com/OctoSense-org/OctoSense-App-Hub/pull/125)。
 **本示例尚未验证真实 Google 登录、读取、写入及人工物理确认。**
 Android Google 授权适配尚未实现；本次不宣称支持 Android、Linux 或 Windows。
 
 ## 使用方法
 
-签名包通过审核后，在兼容的 macOS OctoSense 中经 App Hub 安装。
-宿主维护者须在仓库外配置 Google OAuth 客户端；凭据只在宿主或 Google 授权界面输入。
+在 OctoSense 中打开 **App Hub → Search**，搜索 **Google Calendar**，审阅权限后
+依次点击 **Get → Install → Open**。连接账户前也可先准备本地日程草稿。
+
+使用 Google 服务前，宿主维护者须在仓库外配置 Google OAuth 客户端，参见
+[版本化配置指南](https://github.com/OctoSense-org/OctoSense/blob/desktop-v0.1.0-beta.2/crates/oauth-service/README.md)。凭据只在宿主或 Google 授权界面输入，无需另建 OctoSense 账户。
 
 1. 进入 **Account → Connect Google**，授权后选择日历。
 2. 点击 **Refresh** 同步；同步失败时仍保留上次完整的缓存日程。

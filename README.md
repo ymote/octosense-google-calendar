@@ -7,18 +7,22 @@ drafts, reviewing edits and discussing an event with your configured assistant.
 Publisher: **ymote**. App ID: `org.octosense.samples.googlecalendar`; version: `0.1.0`.
 This is an independent sample, not a Google product.
 
-It requires the connected-app services in [OctoSense #347](https://github.com/OctoSense-org/OctoSense/pull/347)
-and the admission/tool contract in [App Hub #119](https://github.com/OctoSense-org/OctoSense-App-Hub/pull/119).
-Submission for review does not mean catalog acceptance or availability in an
-ordinary released OctoSense build. **Live Google login, reads, writes and physical
-approval have not been validated for this sample.** Android Google authorization
-is missing; Android, Linux and Windows are not listed as supported platforms.
+Use the [OctoSense desktop-v0.1.0-beta.2 macOS Apple Silicon preview](https://github.com/OctoSense-org/OctoSense/releases/tag/desktop-v0.1.0-beta.2).
+This app's signed `0.1.0` bundle is available in the official App Hub catalog
+(first admission: [sequence 7, App Hub #125](https://github.com/OctoSense-org/OctoSense-App-Hub/pull/125)).
+**Live Google login, reads, writes and physical approval have not been validated
+for this sample.** Android Google authorization is missing; Android, Linux and
+Windows are not listed as supported platforms.
 
 ## Use the app
 
-After a reviewer accepts the signed bundle, install it through App Hub in a
-compatible macOS OctoSense build. The host operator must configure a Google OAuth
-client outside this repository; enter credentials only in the host/provider flow.
+In OctoSense, open **App Hub → Search**, search **Google Calendar**, then choose
+**Get → Install → Open** after reviewing the requested permissions. You can prepare
+local event drafts before connecting an account.
+
+For Google access, the host operator must configure a Google OAuth client outside
+this repository; follow the [versioned host setup guide](https://github.com/OctoSense-org/OctoSense/blob/desktop-v0.1.0-beta.2/crates/oauth-service/README.md). Enter credentials
+only in the host/provider flow. No separate OctoSense account is required.
 
 1. Open **Account → Connect Google**, complete consent and choose a calendar.
 2. Use **Refresh** to sync. A failed sync keeps the last complete cached agenda.
