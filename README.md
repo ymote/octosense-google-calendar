@@ -8,8 +8,8 @@ Publisher: **ymote**. App ID: `org.octosense.samples.googlecalendar`; version: `
 This is an independent sample, not a Google product.
 
 Use the [OctoSense desktop-v0.1.0-beta.2 macOS Apple Silicon preview](https://github.com/OctoSense-org/OctoSense/releases/tag/desktop-v0.1.0-beta.2).
-The previous signed `0.1.0` bundle is available in the official App Hub catalog
-(first admission: [sequence 7, App Hub #125](https://github.com/OctoSense-org/OctoSense-App-Hub/pull/125)).
+The signed `0.1.1` bundle is available in the official App Hub catalog
+([sequence 10, App Hub #133](https://github.com/OctoSense-org/OctoSense-App-Hub/pull/133)).
 **Live Google login, reads, writes and physical approval have not been validated
 for this sample.** Android Google authorization is missing; Android, Linux and
 Windows are not listed as supported platforms.
@@ -18,8 +18,8 @@ Windows are not listed as supported platforms.
 
 In OctoSense, open **App Hub → Search**, search **Google Calendar**, then choose
 **Get → Install → Open** after reviewing the requested permissions. You can prepare
-local event drafts before connecting an account. The signed 0.1.1 update needs
-its own catalog admission before App Hub serves it; the v0.1.0 tag stays immutable.
+local event drafts before connecting an account. The `v0.1.1` release tag and
+previous `v0.1.0` tag remain immutable.
 
 For Google access, the host operator must configure a Google OAuth client outside
 this repository; follow the [versioned host setup guide](https://github.com/OctoSense-org/OctoSense/blob/desktop-v0.1.0-beta.2/crates/oauth-service/README.md). Enter credentials
@@ -85,3 +85,8 @@ Read the [privacy policy](PRIVACY.md) before connecting an account or using AI.
 Report problems through [GitHub issues](https://github.com/ymote/octosense-google-calendar/issues)
 without account data, tokens or private event details. Licensed under
 [Apache-2.0](LICENSE); see [NOTICE](NOTICE) for attribution.
+
+The [post-admission catalog receipt](review/CATALOG-0.1.1.json) verifies the default
+public catalog, signed pack and listing assets. This adds publication evidence,
+not new native, model or live-provider acceptance. The tagged release record
+remains the historical record from signing time.

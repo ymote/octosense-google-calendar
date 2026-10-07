@@ -10,7 +10,7 @@
   "source_tag": "v0.1.1",
   "hub_source_url": "https://github.com/OctoSense-org/OctoSense-App-Hub/commit/b0856ed2792de87db87866b62d33a0206d8f3c34",
   "hub_binary_sha256": "f86581c545eb4af5aec8b48c5adc9eff5131c239217f508cdb62ae88d7d7bf2b",
-  "catalog_published": false,
+  "catalog_published": true,
   "release_files_sha256": {
     "AGENT.md": "63f2149c37831a183f8d951fe9c713503e6d6b16a2c1d9a9a69c8ee31aab3150",
     "assets/icon.svg": "5f4976fe46338bdfa4af1276afa2d0af625d195cc3aead9ba997212c79706486",
@@ -27,5 +27,13 @@
     "contract_cases": 3,
     "native_range_helper_cases": 4
   },
-  "validation_boundary": "Signed gate, scan packet and focused contracts passed. The exact range helper executed in a hidden native fixture with bounded, missing, null and incomplete metadata. UI layout, agent/tools and original screenshots are unchanged. No new full-app native, live Google or model acceptance is claimed. Official catalog admission is pending."
+  "validation_boundary": "Signed gate, scan packet and focused contracts passed. The exact range helper executed in a hidden native fixture with bounded, missing, null and incomplete metadata. UI layout, agent/tools and original screenshots are unchanged. No new full-app native, live Google or model acceptance is claimed. Official catalog admission completed at sequence 10; the default public catalog and artifacts were verified separately without adding native/provider claims.",
+  "catalog_publication": {
+    "sequence": 10,
+    "pull_request": "https://github.com/OctoSense-org/OctoSense-App-Hub/pull/133",
+    "merge_commit_url": "https://github.com/OctoSense-org/OctoSense-App-Hub/commit/b8750d92c41365c4ff80f9baef077275a15b020b",
+    "verified_at_utc": "2026-10-07T07:19:32.352387+00:00",
+    "receipt": "CATALOG-0.1.1.json",
+    "immutable_tag_record_unchanged": true
+  }
 }
