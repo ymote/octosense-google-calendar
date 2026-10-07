@@ -1,8 +1,8 @@
 # Privacy — Google Calendar for OctoSense
 
-Effective 2026-10-06 · Publisher: ymote · [简体中文](PRIVACY.zh-CN.md)
+Effective 2026-10-07 · Publisher: ymote · [简体中文](PRIVACY.zh-CN.md)
 
-This describes version `0.1.0`, app ID `org.octosense.samples.googlecalendar`,
+This describes version `0.1.1`, app ID `org.octosense.samples.googlecalendar`,
 running in the compatible OctoSense development host. Live Google operation
 remains unverified for this sample. The publisher operates no account service,
 analytics endpoint or separate Calendar backend for this app.
@@ -12,7 +12,7 @@ analytics endpoint or separate Calendar backend for this app.
 | Data | Purpose and destination |
 | --- | --- |
 | Google account identity, email and OAuth tokens | The host performs Google authorization. The bundle receives an app-bound opaque connection handle and account metadata, never the token or password. On macOS the normal host uses the platform credential vault for tokens. Google processes the authorization and API requests. |
-| Calendar names, IDs, timezone and event records | The host reads the selected calendar through Google APIs. It stores a local cache partitioned by app, connection and calendar, including event contents, ETags and sync state. Failed sync pages do not replace the last complete cache. |
+| Calendar names, IDs, timezone and event records | The updated host reads a finite agenda from the selected calendar through Google APIs (past 30 days / next 366 days at refresh); this is not a complete historical export. It stores a local cache partitioned by app, connection and calendar, including event contents, ETags and sync state. Failed sync pages do not replace the last complete cache. |
 | Unsent event draft and selected account/calendar | Stored in the app's local files, along with published-event route bindings. Draft contents include title, dates, times, timezone, location and notes. They are not submitted as event writes until the host review is approved. |
 | Event changes | The host shows the exact proposed event before a create/update request to Google. Google and people permitted to access the destination calendar may see the resulting event. This sample does not implement invitation sending. |
 | Explicitly published Glance card | Event title, time, location, description and app-bound identity are passed to the local OctoSense Glance host for display and durable restoration. Anyone able to view that device screen may see them. Cards have a 24-hour display expiry; this is not a guarantee of immediate erasure from storage. Publication requests `notify: false`. |

@@ -1,4 +1,4 @@
-# App Hub scan answers — 0.1.0 development preview
+# App Hub scan answers — 0.1.1 development preview
 
 Publisher self-review for `org.octosense.samples.googlecalendar`; this is not an
 independent Hub approval. The current `hub scan bundle --packet build/review.json`
@@ -8,7 +8,7 @@ and [historical acceptance limits](../ACCEPTANCE.md).
 
 ## 1. Does the app do what its name, subtitle and description claim? Cite the text in its source.
 
-The source implements the stated development-preview flows:
+The source implements the stated development-preview flows. In 0.1.1, cache and refresh status disclose the finite host agenda (past 30 days / next 366 days), legacy responses without bounds say date range unavailable, and a missing event is not described as deleted. The original widget layout, tools and screenshots remain unchanged. Historical line references below identify the original 0.1.0 implementation:
 
 - `bundle/main.splash:49` (`account_list`) and `:70` (`connect`) use shared
   Google authorization; the visible button at `:377` says **Connect Google**.
@@ -108,9 +108,7 @@ human editor. Private tool results are not exposed as shareable cross-app tools.
 
 ## 8. Route: pass, human-review, or reject. Give reasons a publisher can act on.
 
-**human-review** for a first publisher submission and dependency-bound macOS
-preview. The unsigned local gate passed with only the expected publisher-signature
-warning; publisher signing and final signed admission remain separate steps.
+**human-review** is the publisher recommendation for this bounded-agenda compatibility update, not a maintainer verdict. Final signed gate and questions are recorded alongside these answers. The 0.1.0 admission and historical native tests do not verify this new digest.
 
 Before catalog admission, a reviewer should verify the final signed bundle,
 publisher key and exact commit; the privacy/support URLs; and compatibility with

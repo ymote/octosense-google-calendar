@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "test": "Native Makepad evaluation of exact range_label helper extracted from Calendar 0.1.1 source",
+  "cases": [
+    "bounded window",
+    "legacy response without window",
+    "null window",
+    "incomplete bounds"
+  ],
+  "passed": 4,
+  "source_sha256": "f4d5412d9f74754dd7ddcc106ab74eb42cdaf3c9af84e63dd724a4e76f45dec3",
+  "helper_sha256": "26c0d91941a2f77bd9ab6c8c756ed4183b579ddff7032fd33e9c71bb75c55654",
+  "binary_sha256": "5fd683007b7ea02e53c7efa81667d5e5fce85b27508622b8a76fd12e02c65989",
+  "scope": "Synthetic helper fixture only; not whole Calendar UI or live Google acceptance."
+}

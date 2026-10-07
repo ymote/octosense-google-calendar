@@ -1,0 +1,10 @@
+{
+  "app_id": "org.octosense.samples.googlecalendar",
+  "digest": "3e262601ebb6092fda6bb10862b92d05a641cb76f84c9e037f25296eda69459a",
+  "findings": [],
+  "passed": true,
+  "resources": [],
+  "schema": 1,
+  "stage": "structural",
+  "version": "0.1.0"
+}
