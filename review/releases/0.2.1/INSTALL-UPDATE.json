@@ -1,0 +1,122 @@
+{
+  "schema": 1,
+  "app_id": "io.github.ymote.googlecalendar",
+  "platform": "macOS",
+  "shell_source": "5e1a8414cba4c9c3ab041b5555b6d90bcbad03bb",
+  "shell_binary_sha256": "e758a27c2d07ea7e8651e953b5ec267fcb19918a9b4dc04166cc77c0de530539",
+  "catalog_authority": "ephemeral-local-legacy-not-production-v2",
+  "publisher_proof": "genuine-GitHub-tag-push",
+  "live_authentication": false,
+  "provider_writes": false,
+  "model_calls": false,
+  "personal_data_used": false,
+  "checks": [
+    "optional_hub_agent_declined",
+    "search_install_open_genuine_first_release",
+    "first:complete_local_event_draft_edited",
+    "first:provider_write_without_account_refused",
+    "search_install_open_genuine_update",
+    "update:exact_complete_event_draft_retained",
+    "update:provider_write_without_account_refused",
+    "reopen_updated_app_from_library",
+    "restart:exact_complete_event_draft_retained",
+    "restart:provider_write_without_account_refused"
+  ],
+  "versions": [
+    "0.2.0",
+    "0.2.1",
+    "0.2.1"
+  ],
+  "visual_review": {
+    "reviewer": "Codex; same operator as input driver, not independent/model-driven",
+    "original_native_captures_inspected": [
+      "update/01-search.png",
+      "update/app-event.png",
+      "restart/app-event.png"
+    ],
+    "outcome": "Tested labels and exact draft text readable; controls reachable; no numeric overall UX/soak score claimed.",
+    "published_capture": "installed-update.png"
+  },
+  "status": "passed",
+  "inputs": [
+    {
+      "version": "0.2.0",
+      "app_id": "io.github.ymote.googlecalendar",
+      "pack_sha256": "4fefe12ebe1945934331c8a044d8c2e8b178911786b57c8515be89babd3e4f97",
+      "catalog_sha256": "149039761a10fee45e155f9abab00441950217a24d24964c3378a416f16265bc",
+      "source_commit": "624b778a2cf30becca31835febd96eab8db79f07",
+      "full_github_proof_preserved": true
+    },
+    {
+      "version": "0.2.1",
+      "app_id": "io.github.ymote.googlecalendar",
+      "pack_sha256": "a92cb1e86be19f8b8c158076fe054ca88e481bf8b580c465e83671834934d64c",
+      "catalog_sha256": "252d832f233fdb1527f6377f34fc228de581c0e10a973f8c17d7189b57fe1156",
+      "source_commit": "e4af7427680bdc331eb639f67dd6f53db5b85775",
+      "full_github_proof_preserved": true
+    }
+  ],
+  "owned_processes_stopped": true,
+  "raw_driver_receipt_sha256": "3d34d0b8961a7f29f1c62a8c391bd3077b8dbad472236c6ed8efe1f3423827f6",
+  "driver_sha256": "e20c8f25e4c07ee76a1b1c131ee5ef539f635c566ba8f2dacff2f6bf73e5cd1b",
+  "preparer_sha256": "6c872cdb5cb237e9ea7af63b7825cfe1d6f4647338c8059e556d00d5a7e58d16",
+  "release_receipts": [
+    {
+      "schema": 1,
+      "app_id": "io.github.ymote.googlecalendar",
+      "version": "0.2.0",
+      "repository": "ymote/octosense-google-calendar",
+      "commit": "624b778a2cf30becca31835febd96eab8db79f07",
+      "tag": "v0.2.0",
+      "run": "37748964260",
+      "pack_sha256": "4fefe12ebe1945934331c8a044d8c2e8b178911786b57c8515be89babd3e4f97",
+      "hub_admission": "not submitted"
+    },
+    {
+      "schema": 1,
+      "app_id": "io.github.ymote.googlecalendar",
+      "version": "0.2.1",
+      "repository": "ymote/octosense-google-calendar",
+      "commit": "e4af7427680bdc331eb639f67dd6f53db5b85775",
+      "tag": "v0.2.1",
+      "run": "37749888483",
+      "pack_sha256": "a92cb1e86be19f8b8c158076fe054ca88e481bf8b580c465e83671834934d64c",
+      "hub_admission": "not granted by this workflow"
+    }
+  ],
+  "hub_verifier": {
+    "hub_source": "4bf77076ce75ee9897ccc247afd5de5e3abe5af5",
+    "hub_binary_sha256": "68ad3cb56c8b48dcf83f7937186b4b266648a499e9511efa2254f26d10c670c5",
+    "ephemeral_hub_private_keys_deleted": true,
+    "native_steps": [
+      "keygen",
+      "keygen",
+      "certify",
+      "publisher-unpack",
+      "publisher-verify",
+      "publish",
+      "publisher-unpack",
+      "publisher-verify",
+      "publish"
+    ]
+  },
+  "captures_sha256": {
+    "update/01-search.png": "5698c8fcd60ce52284dea074f4bb7bdf9b5e7fdde048eefe8c8abe8171309c6b",
+    "update/app-event.png": "4592c590e0ed48e81182f25b2ab3328af280e204854aba548e51abef5a49f7a9",
+    "first/00-hub-agent-consent.png": "538bd9dd0fc90160e2189beaf84f9a21006806b4295ebc9001ccb110f9fb0d48",
+    "first/01-search.png": "c4e4044a9fcc06fea5589ff10010daefa600b72348ecef884f8718814ccb1cea",
+    "first/app-event.png": "19b4758be8c14339919074037bbf250efc92ab78cd73a2c2d704ef2bc41f3f88",
+    "restart/app-event.png": "a533544d0a87858a3b54f7180c1fbe2faa02d24f636677766e814ee0de9cf596"
+  },
+  "unverified": [
+    "official GitHub-v2 catalog admission",
+    "live Google authentication",
+    "provider writes and physical approval",
+    "model/background-agent behavior",
+    "phone/Linux/Windows usability",
+    "Glance presentation",
+    "long-duration UX soak"
+  ],
+  "failure_history": "No failure in this full release install/update/restart run.",
+  "official_catalog_publication": false
+}
