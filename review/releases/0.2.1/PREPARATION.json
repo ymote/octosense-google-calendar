@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "app_id": "io.github.ymote.googlecalendar",
+  "version": "0.2.1",
+  "workflow_generator": "https://github.com/OctoSense-org/OctoScript-App-Design-Flow/commit/a9a07f4031b8ce8c75675733b38362ddfba3b7ea",
+  "change": "stage-neutral publication receipt and open-or-update submission guidance",
+  "unchanged_from": "v0.2.0",
+  "ui_source_sha256": "6d20e0540a8a7533db9a8c2fbdd2edfaf6ec60b6444b57b0e88ef91be6788500",
+  "tools_sha256": "06c2711440f9ebd99629112ed676c2335ad4ad3e03eac50030a3dd60d3510c56",
+  "listing_captures": "unchanged original native 0.2.0 captures; app UI unchanged",
+  "source_gate": "GATE.txt",
+  "genuine_0_2_1_proof": false,
+  "genuine_0_2_1_update_acceptance": false,
+  "provider_writes": false,
+  "model_calls": false,
+  "official_catalog_admission": false
+}

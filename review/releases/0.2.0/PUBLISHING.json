@@ -1,0 +1,56 @@
+{
+  "schema": 1,
+  "app_id": "io.github.ymote.googlecalendar",
+  "platform": "macOS",
+  "shell_source": "5607e90b5c0ac217d6cd2d946c06dc6d2f046c00",
+  "shell_binary_sha256": "e758a27c2d07ea7e8651e953b5ec267fcb19918a9b4dc04166cc77c0de530539",
+  "catalog_authority": "ephemeral-local-legacy-not-production-v2",
+  "publisher_proof": "genuine-GitHub-tag-push",
+  "live_authentication": false,
+  "provider_writes": false,
+  "model_calls": false,
+  "personal_data_used": false,
+  "checks": [
+    "optional_hub_agent_declined",
+    "search_install_open_genuine_first_release",
+    "first:complete_local_event_draft_edited",
+    "first:provider_write_without_account_refused"
+  ],
+  "versions": [
+    "0.2.0"
+  ],
+  "visual_review": {
+    "tested_views": "passed: readable complete test strings and reachable controls; original native capture inspected",
+    "overall_ux_grade": null
+  },
+  "status": "passed",
+  "inputs": [
+    {
+      "version": "0.2.0",
+      "app_id": "io.github.ymote.googlecalendar",
+      "pack_sha256": "4fefe12ebe1945934331c8a044d8c2e8b178911786b57c8515be89babd3e4f97",
+      "catalog_sha256": "af9e1b4cda818117d1d0230fa15ac1af9f53843f59a1a3c9c72129d2fa3a39d3",
+      "source_commit": "624b778a2cf30becca31835febd96eab8db79f07",
+      "full_github_proof_preserved": true
+    }
+  ],
+  "owned_processes_stopped": true,
+  "release": {
+    "schema": 1,
+    "app_id": "io.github.ymote.googlecalendar",
+    "version": "0.2.0",
+    "repository": "ymote/octosense-google-calendar",
+    "commit": "624b778a2cf30becca31835febd96eab8db79f07",
+    "tag": "v0.2.0",
+    "run": "37748964260",
+    "pack_sha256": "4fefe12ebe1945934331c8a044d8c2e8b178911786b57c8515be89babd3e4f97",
+    "hub_admission": "not submitted"
+  },
+  "scope": "genuine 0.2.0 release first installation and local-only editing in isolated Mac shell",
+  "official_catalog_admission": false,
+  "captures_sha256": {
+    "00-hub-agent-consent.png": "9de56d9ea882a7ec2866e3ed361489ee4a00f3b795e2dcf14366236a32bb062a",
+    "01-search.png": "1c3c36cc14c1b67d47c9bb98f6be9bc57419bc41ceecb9b74fffb087122d6825",
+    "app-event.png": "1afbae095039c7ed4f54e371782c0980c7d969791c630c0e2be2760ca18cb368"
+  }
+}

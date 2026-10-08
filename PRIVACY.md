@@ -2,7 +2,7 @@
 
 Effective 2026-10-08 · Publisher: ymote · [简体中文](PRIVACY.zh-CN.md)
 
-This describes version `0.2.0`, app ID `io.github.ymote.googlecalendar`,
+This describes version `0.2.1`, app ID `io.github.ymote.googlecalendar`,
 running in the compatible OctoSense development host. Live Google operation
 remains unverified for this sample. The publisher operates no account service,
 analytics endpoint or separate Calendar backend for this app.

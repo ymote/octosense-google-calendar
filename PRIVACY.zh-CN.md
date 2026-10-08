@@ -2,7 +2,7 @@
 
 生效日期：2026-10-08 · 发布者：ymote · [English](PRIVACY.md)
 
-本说明适用于在兼容开发版 OctoSense 宿主中运行的 `0.2.0` 版本，应用 ID 为
+本说明适用于在兼容开发版 OctoSense 宿主中运行的 `0.2.1` 版本，应用 ID 为
 `io.github.ymote.googlecalendar`。本示例尚未验证真实 Google 服务流程。
 发布者不为此应用运营账号服务、分析上报端点或独立的日历后端。
 
