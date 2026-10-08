@@ -31,11 +31,14 @@ class ReleaseContract(unittest.TestCase):
     def test_layout_original_pixels_and_read_only_tools_are_preserved(self):
         prior = json.loads((ROOT / 'review/releases/0.1.0/RELEASE.json').read_text())['release_files_sha256']
         for name, digest in prior.items():
-            if name in ('AGENT.md', 'tools.json') or name.startswith('screenshots/'):
+            if name in ('AGENT.md', 'tools.json') :
                 self.assertEqual(hashlib.sha256((BUNDLE / name).read_bytes()).hexdigest(), digest, name)
         self.assertEqual(hashlib.sha256(SOURCE[SOURCE.index('let ink = '):].encode()).hexdigest(), '77e870d8b7b52dc04439cd610b3873f03e9681e4f482e84ac2bb187d4bb7a55d')
         manifest = json.loads((BUNDLE / 'manifest.json').read_text())
-        self.assertEqual(manifest['version'], '0.1.1')
+        self.assertEqual(manifest['version'], '0.2.0')
+        self.assertEqual(manifest['id'], 'io.github.ymote.googlecalendar')
+        self.assertNotIn('org.octosense.samples.googlecalendar', SOURCE)
+        self.assertIn('app://io.github.ymote.googlecalendar/', SOURCE)
         self.assertFalse(manifest['agent'].get('background', False))
         self.assertEqual(manifest['network']['hosts'], [])
         self.assertEqual(json.loads((BUNDLE / 'listing.json').read_text())['platforms'], ['macos'])

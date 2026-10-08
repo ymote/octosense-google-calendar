@@ -1,76 +1,79 @@
-# OctoSense Google Calendar 应用
+# OctoSense Google Calendar
 
 [English](README.md) | 简体中文
 
-这是一个 **macOS 开发预览版**：查看 Google 日历、保留日程草稿、审阅修改，
-并通过你配置的 AI 助手讨论日程。发布者为 **ymote**；应用 ID 为
-`org.octosense.samples.googlecalendar`，版本为 `0.1.1`（发布者已签名预览）。
-这是独立示例应用，不是 Google 官方产品。
+这是 **macOS 开发预览版**，用于查看有限范围的 Google 日程、保留草稿、在宿主中审阅修改，并与只读助手讨论所选日程。
+发布者为 [ymote](https://github.com/ymote)，新应用 ID 为 `io.github.ymote.googlecalendar`，
+可编辑源码版本为 **0.2.0**。这是独立示例，不是 Google 官方产品。
 
-请使用 [OctoSense desktop-v0.1.0-beta.2 macOS Apple Silicon 预览版](https://github.com/OctoSense-org/OctoSense/releases/tag/desktop-v0.1.0-beta.2)。
-签名版本 `0.1.1` 已进入官方 App Hub 目录
-（[目录序号 10，App Hub #133](https://github.com/OctoSense-org/OctoSense-App-Hub/pull/133)）。
-**本示例尚未验证真实 Google 登录、读取、写入及人工物理确认。**
-Android Google 授权适配尚未实现；本次不宣称支持 Android、Linux 或 Windows。
+新版本通过 GitHub 发布证明确认发布者身份，无需开发者签名私钥或仓库签名机密。
+它与旧应用 `org.octosense.samples.googlecalendar` 分别安装，账户授权和本地数据不会自动迁移。
+旧 `v0.1.0`／`v0.1.1` 标签、签名和验收记录不变；`publisher.json` 仅描述历史身份。
 
-## 使用方法
+## 安装与连接
 
-在 OctoSense 中打开 **App Hub → Search**，搜索 **Google Calendar**，审阅权限后
-依次点击 **Get → Install → Open**。连接账户前也可先准备本地日程草稿。
-`v0.1.1` 及之前的 `v0.1.0` 标签保持不变。
+新版本需要 **应用契约 1.8.0／`publisher-github-v1`** 及兼容的 OctoSense
+连接服务主机。旧 desktop beta.2 无法安装 GitHub 证明发行包。创建标签不等于
+App Hub 收录；先查看提交 issue 的目录／发行状态。已收录且主机兼容时，使用
+**App Hub → Search → Google Calendar → Get → Install → Open**，审阅请求的权限。
 
-使用 Google 服务前，宿主维护者须在仓库外配置 Google OAuth 客户端，参见
-[版本化配置指南](https://github.com/OctoSense-org/OctoSense/blob/desktop-v0.1.0-beta.2/crates/oauth-service/README.md)。凭据只在宿主或 Google 授权界面输入，无需另建 OctoSense 账户。
+Google 登录由宿主浏览器／提供方流程完成，应用不收集密码。宿主维护者配置
+OAuth 客户端和对应 API，普通用户无需注册开发者客户端，也无需另建 OctoSense
+账户。参见[宿主 OAuth 指南](https://github.com/OctoSense-org/OctoSense/blob/main/crates/oauth-service/README.md)。
+应用仅获得绑定应用与账户的不透明句柄，不接收凭据。
 
-1. 进入 **Account → Connect Google**，授权后选择日历。
-2. 点击 **Refresh** 同步。更新后的宿主返回有限日程范围：相对于成功刷新时刻的
-   **过去 30 天／未来 366 天**；刷新和缓存状态都会标示该范围。失败时保留上次完整缓存。
-   旧宿主或缓存缺少范围元数据时显示 **date range unavailable**，需在更新后的宿主中刷新。
-   事件未出现在当前范围内，不等于已从 Google 日历删除。
-3. 使用 **+ Event** 新建，或在日程中点击 **Edit**。填写起止日期、时间和明确的
-   IANA 时区；**Keep draft** 将未完成内容保存在本机。
-4. **Review & Save** 打开宿主审阅界面。核对账号、日历、时间和内容后才批准。
-   遇到版本冲突会保留草稿，须根据最新日程重新审阅，不能强行覆盖。
-5. **Glance** 将所选日程展示 24 小时，不发送通知；卡片内的 **Open Calendar**
-   返回本应用中的同一日程。
-6. **Chat** 在宿主授权后，把所选日程上下文及问题发送给你配置的模型。
-   助手只有四个私有只读工具，**不能预订、新建或修改日程**；建议须在编辑器中应用。
+**发布流程测试不验证真实 Google 登录、读取／写入或物理确认。** Android Google
+授权仍不可用，本版本不宣称支持 Android、Linux 或 Windows。独立 `card-host`
+只能验证本地界面和明确的服务不可用状态。
 
-重复日程只显示原始开始时间；本版本不展开重复实例、不编辑重复规则，也不发送邀请。
-尚未验证 Glance 卡片聊天与完整应用聊天是否共享历史。
+## 使用
 
-## 验证和开发
+1. **Account → Connect Google** 完成授权后选择日历。**Refresh** 读取刷新时刻
+   之前 30 天／之后 366 天；失败时保留上次完整缓存。旧数据缺少范围元信息时明确
+   显示不可用。范围内未显示的事件不一定已从 Google 删除。
+2. **+ Event** 或 **Edit** 打开本地编辑器，填写起止日期／时间及 IANA 时区。
+   **Keep draft** 保留未发送修改，不写入 Google；**Review & Save** 使用宿主的
+   完整内容审阅界面。
+3. **Glance** 展示所选日程 24 小时且不通知；**Open Calendar** 通过新应用 ID
+   返回同一日程。
+4. **Chat** 经同意后将所选日程发送到已配置模型。助手只有四个私有读取工具，
+   不能预订、新建或修改日程；建议须在编辑器中应用并审阅。
 
-0.1.1 只修改范围／状态处理和发布元数据；界面布局、代理指令、工具声明与原始截图保持不变。
-0.1.0 源码来自[固定版本的 App Design Flow 示例](https://github.com/OctoSense-org/OctoScript-App-Design-Flow/tree/5b0fde7ed0e9e4131751d16f55ba3d8a3180dd95/examples/connected-apps/google-calendar)。
-历史 macOS 验证包括八项签名安装/模拟服务流程、六项 Glance 路由流程、真实 DeepSeek
-对模拟日程的建议，以及 36 轮、620 秒的原生交互测试。这些使用**模拟日历服务**，
-不能视为真实 Google 验证。原始证据在 [evidence/](evidence/)，来源与限制见
-[ACCEPTANCE.md](ACCEPTANCE.md)。这些不是 0.1.1 的新原生／服务执行证据。
-运行 `python3 -m unittest discover -s tests -v` 检查本次发布契约。旧签名记录归档至
-`review/releases/0.1.0/`，当前签名验证见 `review/GATE.txt` 与 `review/RELEASE.json`。
+本版本不展开／编辑重复实例、不发送邀请；Glance 和完整应用的聊天历史共享未验证。
 
-验证签名发行版时，将兼容的 App Hub 工具加入 `PATH`，在本仓库运行
-（Python 只读取公开的发布者公钥）：
+## 发布和本地检查
+
+可编辑 `bundle/` 不含发行证明。[GitHub 工作流](.github/workflows/publish-app.yml)
+固定已审阅的 Hub 工具版本。完成源码测试和审阅后推送全新 `v<manifest.version>`
+标签，GitHub 准备、证明、验证并上传 `app.bundle.pack.json`。不要把已封存包覆盖
+回开发源码，不要移动已有标签。
 
 ```sh
-CALENDAR_PUBLISHER_KEY="$(python3 -c 'import json; print(json.load(open("publisher.json"))["public_key"])')"
-hub check bundle --publisher-key "ymote=$CALENDAR_PUBLISHER_KEY"
+python3 -m unittest discover -s tests -v
+"$HUB" stamp bundle
+"$HUB" check bundle --allow-unsigned
 mkdir -p build
-hub scan bundle --publisher-key "ymote=$CALENDAR_PUBLISHER_KEY" --packet build/review.json
+"$HUB" scan bundle --packet build/review.json
 ```
 
-验证前不要重新 stamp 或修改发行包。开发时请使用单独的可编辑副本，并按
-[Hub 发布流程](https://github.com/OctoSense-org/OctoSense-App-Hub/blob/main/docs/PUBLISHING.md)
-对修改后的内容重新 stamp、检查未签名副本，再用自己的发布者密钥签名及验证。
-`--allow-unsigned` 仅接受确实未签名的本地包，不会信任未知签名，也不能绕过安装验证。
-只提交 `bundle/`。
-[审核答案](review/ANSWERS.md)涵盖扫描器全部八个问题。
-依赖完整运行时的复现命令保留在[原始验收文档](https://github.com/OctoSense-org/OctoScript-App-Design-Flow/blob/5b0fde7ed0e9e4131751d16f55ba3d8a3180dd95/examples/connected-apps/google-calendar/ACCEPTANCE.md)。
+通过 [App Hub issue](https://github.com/OctoSense-org/OctoSense-App-Hub/issues) 请求
+发布，提供 ID、源码、权限、截图和审核答案。issue 可先于标签创建；完成后补充
+成功工作流、确切提交和包哈希。管理员审阅和目录发布与创建发行版是不同步骤。
+下载包使用 `hub publisher-unpack`／`hub publisher-verify` 验证，不重新 stamp
+或移除证明。
 
-连接账号或使用 AI 前请阅读[隐私说明](PRIVACY.zh-CN.md)。通过
-[GitHub issues](https://github.com/ymote/octosense-google-calendar/issues)反馈问题时，
-不要提交账号资料、令牌或私人日程。采用 [Apache-2.0](LICENSE)；署名见 [NOTICE](NOTICE)。
+## 证据边界
 
-[收录后目录记录](review/CATALOG-0.1.1.json) 验证默认公开目录、签名包与列表资源。
-它只增加发布证据，不增加原生、模型或真实服务验收声明。标签中的发布记录仍保留签名时的历史状态。
+本版本保留当前功能代码，使用新身份及发布流程。`review/`、已有 `evidence/`
+和旧标签中的记录保留原始源码／二进制身份，不能当作 0.2.0 的新验收。发行前只用
+新实际原生截图替换列表图，并逐张审视。
+
+历史 Mac 测试使用模拟服务，包括 36 轮交互及 DeepSeek 对虚构事件的建议。
+[ACCEPTANCE](ACCEPTANCE.md) 保留确切身份和限制；不能由此推断真实 Google、
+物理确认或新包摘要已验证。
+
+连接账户或启用 AI 前请阅读[隐私说明](PRIVACY.zh-CN.md)。
+[公开支持](https://github.com/ymote/octosense-google-calendar/issues) 中不要提交私人邮件／事件、凭据
+或原始日志。采用 [Apache-2.0](LICENSE)。
+
+当前源码检查：[原生离线记录](review/releases/0.2.0/NATIVE.json)、[准入输出](review/releases/0.2.0/GATE.txt)、[八项审核答案](review/ANSWERS.md)。

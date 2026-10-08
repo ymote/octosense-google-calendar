@@ -1,0 +1,103 @@
+{
+  "schema": 1,
+  "app_id": "io.github.ymote.googlecalendar",
+  "version": "0.2.0",
+  "scope": "editable-source-offline-native-ui",
+  "author": "existing sample implementation with identity-specific bindings updated by Codex",
+  "driver_and_pixel_reviewer": "Codex, same operator; not independent or model-autonomous validation",
+  "platform": "macOS",
+  "window_logical": [
+    412,
+    892
+  ],
+  "native_build": "debug card-host; no performance claim",
+  "host_source": "90780ca5",
+  "makepad_revision": "32d6415fb7476345ad36ee4f98d6f844d1f07fd2",
+  "renderer_revision": "33dea2f1f3ad3f1346a219aa8cf6e91b31361e23",
+  "binary_sha256": "c6da88e9405df98bd2d0e916688b3ba6877f83d3e428fae43008cafe526a8c99",
+  "source_ui_sha256": "6d20e0540a8a7533db9a8c2fbdd2edfaf6ec60b6444b57b0e88ef91be6788500",
+  "glance_ui_sha256": null,
+  "driver_sha256": "39ccb44fdf1e4da58b2f9ce2e692bf4c53219e945b35bba26335f07b1d16729d",
+  "checks_passed": true,
+  "driver_receipts": [
+    {
+      "schema": 1,
+      "recorded_at": "2026-10-08T08:09:51.652736+00:00",
+      "platform": "macOS hidden card-host 412x892 logical",
+      "source_sha256": "6d20e0540a8a7533db9a8c2fbdd2edfaf6ec60b6444b57b0e88ef91be6788500",
+      "manifest_sha256": "290d9cbb32d4faf727970146e1a00c26388ddd2974c35065c74985dfb8bf31b7",
+      "binary_sha256": "c6da88e9405df98bd2d0e916688b3ba6877f83d3e428fae43008cafe526a8c99",
+      "driver_sha256": "39ccb44fdf1e4da58b2f9ce2e692bf4c53219e945b35bba26335f07b1d16729d",
+      "checks": [
+        "honest_empty_and_missing_service_state",
+        "unavailable_auth_and_empty_resume_remain_usable",
+        "local_draft_accepts_complete_dates_timezone_and_multiline_notes",
+        "all_day_toggle_round_trip_preserves_draft",
+        "review_without_account_refused_and_draft_retained"
+      ],
+      "passed": true,
+      "screenshots": {
+        "01-empty-agenda.png": "1916e40815507c2a0f45cf4d0b351f5e689d2d94e19898bfd023c2562c34b287",
+        "02-local-draft.png": "45b2fa0d247a30e524713ac7d580a936f67859c9ef46030f7df65f97886d9bce",
+        "03-account-required.png": "0404401ec86c3982294ca8a1cfbf966447f3650568568dcce22366533c37940f",
+        "02-local-notes.png": "ea7884945756a0d3ee8830e49ccb4ebc28618c9e33e73f5f0da2a7d66a7aa5ed"
+      },
+      "restart_check": false,
+      "live_google": false,
+      "model_used": false,
+      "provider_writes": false,
+      "visual_review": "separate original-image inspection required"
+    },
+    {
+      "schema": 1,
+      "recorded_at": "2026-10-08T08:10:19.767161+00:00",
+      "platform": "macOS hidden card-host 412x892 logical",
+      "source_sha256": "6d20e0540a8a7533db9a8c2fbdd2edfaf6ec60b6444b57b0e88ef91be6788500",
+      "manifest_sha256": "290d9cbb32d4faf727970146e1a00c26388ddd2974c35065c74985dfb8bf31b7",
+      "binary_sha256": "c6da88e9405df98bd2d0e916688b3ba6877f83d3e428fae43008cafe526a8c99",
+      "driver_sha256": "39ccb44fdf1e4da58b2f9ce2e692bf4c53219e945b35bba26335f07b1d16729d",
+      "checks": [
+        "exact_local_draft_restored_after_process_restart",
+        "discard_removes_local_draft_only"
+      ],
+      "passed": true,
+      "screenshots": {
+        "01-empty-agenda.png": "1916e40815507c2a0f45cf4d0b351f5e689d2d94e19898bfd023c2562c34b287",
+        "02-local-draft.png": "45b2fa0d247a30e524713ac7d580a936f67859c9ef46030f7df65f97886d9bce",
+        "03-account-required.png": "0404401ec86c3982294ca8a1cfbf966447f3650568568dcce22366533c37940f",
+        "05-discarded.png": "48e38e07e74ecaefcb09c986d43c1a651a87fab53639ab0a9999d7b8edb8e84f",
+        "02-local-notes.png": "ea7884945756a0d3ee8830e49ccb4ebc28618c9e33e73f5f0da2a7d66a7aa5ed",
+        "04-restarted-draft.png": "f342ee79677fd5e227a4a0bbd6fb6c1991749bfa80d87aca4c57a06f9ea95cd4"
+      },
+      "restart_check": true,
+      "live_google": false,
+      "model_used": false,
+      "provider_writes": false,
+      "visual_review": "separate original-image inspection required"
+    }
+  ],
+  "listed_original_captures": {
+    "screenshots/01-local-draft.png": "45b2fa0d247a30e524713ac7d580a936f67859c9ef46030f7df65f97886d9bce",
+    "screenshots/02-notes.png": "ea7884945756a0d3ee8830e49ccb4ebc28618c9e33e73f5f0da2a7d66a7aa5ed",
+    "screenshots/03-host-required.png": "1916e40815507c2a0f45cf4d0b351f5e689d2d94e19898bfd023c2562c34b287"
+  },
+  "visual_review": {
+    "passed_for_tested_local_views": true,
+    "criteria": [
+      "complete tested labels/text readable",
+      "primary controls reachable",
+      "editor and notes reachable by native scrolling",
+      "empty/unavailable states truthful"
+    ],
+    "limits": "Not an overall UX grade, long soak, keyboard-on-phone, theme or orientation pass."
+  },
+  "retained_failure": "Initial driver assumed scroll reset after Resume draft; actual editor correctly retained scroll. Added bounded bidirectional native scroll and reran with unchanged app UI.",
+  "owned_processes_stopped": true,
+  "live_google": false,
+  "provider_writes": false,
+  "model_used": false,
+  "phone": false,
+  "release_proof_verified": false,
+  "catalog_admission": false,
+  "digest_boundary": "Original native receipts bind UI and then-current unsigned manifest; final listing captures are included by the later source gate. The GitHub workflow seals the final release separately."
+}
