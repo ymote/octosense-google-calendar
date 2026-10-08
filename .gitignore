@@ -10,3 +10,5 @@ profiles/
 *.p12
 *.log
 __pycache__/
+
+/.local-state/

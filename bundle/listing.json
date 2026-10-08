@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "subtitle": "Calendar drafts, review and event advice",
-  "description": "A macOS development preview using OctoSense shared Google sign-in and Calendar services. Select an account/calendar, view a bounded cached agenda (past 30 days / next 366 days on the updated host), keep local drafts, and review new or edited events on the host before saving. Explicitly publish an event to Glance with Open Calendar, or ask the read-only assistant about it. Requires the compatible OctoSense connected-services runtime; bounded-agenda status depends on host window metadata. Native macOS journeys used a synthetic Calendar provider; real DeepSeek advisory chat used synthetic events. Live Google sign-in, reads and writes and physical approval remain unverified. Android Google authorization is not implemented for this sample. Recurring series can be viewed but not edited. Screenshots are original captures of synthetic drafts, a standalone missing-service state and the embedded Glance template.",
+  "description": "MacOS developer preview: view a bounded Google agenda, keep event drafts, review changes in the host and discuss a selected event with a read-only assistant. Uses host-managed Google authorization and optional consented app-agent tools; credentials stay in the host. Fresh GitHub-published app identity with separate storage/account grants from the legacy sample. Requires contract 1.8.0 / publisher-github-v1 and compatible connected services. Includes fictional local UI states. Publishing and local UI tests do not validate live Google login, provider writes, model behavior or physical approval. Android Google authorization is unavailable; only macOS is advertised.",
   "category": "productivity",
   "keywords": [
     "calendar",
@@ -12,8 +12,7 @@
   "screenshots": [
     "screenshots/01-local-draft.png",
     "screenshots/02-notes.png",
-    "screenshots/03-host-required.png",
-    "screenshots/04-glance-template.png"
+    "screenshots/03-host-required.png"
   ],
   "icon": "assets/icon.svg",
   "platforms": [
@@ -24,7 +23,7 @@
     "support": "https://github.com/ymote/octosense-google-calendar/issues",
     "privacy_policy_url": "https://github.com/ymote/octosense-google-calendar/blob/main/PRIVACY.md"
   },
-  "release_notes": "0.1.1: disclose the finite agenda window in cache and refresh status; events missing from that window are not described as deleted. Legacy responses without window metadata say date range unavailable. Layout, tools, exact host review and original screenshots are unchanged. macOS developer-preview limitations remain.",
+  "release_notes": "0.2.0: fresh app ID and GitHub-attested publishing workflow, with no developer signing key. Previous legacy releases remain immutable; no data/account migration. Current bounded-agenda UI preserved; Glance/chat/deep links now target the fresh ID. Fresh native screenshots and release-specific validation accompany this version; live provider effects remain unverified.",
   "age_rating": "all",
   "license": "Apache-2.0"
 }

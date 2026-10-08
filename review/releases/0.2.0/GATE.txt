@@ -1,0 +1,3 @@
+io.github.ymote.googlecalendar 0.2.0 — PASSED
+  [warning] publisher-signature: unsigned: accountability rests on the hub alone
+  grants: capabilities {"auth", "gcalendar", "glance", "octos.session.open", "octos.turn.start", "storage"}, hosts {}, storage 1048576 bytes, agent read-only
