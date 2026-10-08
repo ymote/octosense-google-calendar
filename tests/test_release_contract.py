@@ -35,7 +35,7 @@ class ReleaseContract(unittest.TestCase):
                 self.assertEqual(hashlib.sha256((BUNDLE / name).read_bytes()).hexdigest(), digest, name)
         self.assertEqual(hashlib.sha256(SOURCE[SOURCE.index('let ink = '):].encode()).hexdigest(), '77e870d8b7b52dc04439cd610b3873f03e9681e4f482e84ac2bb187d4bb7a55d')
         manifest = json.loads((BUNDLE / 'manifest.json').read_text())
-        self.assertEqual(manifest['version'], '0.2.0')
+        self.assertEqual(manifest['version'], '0.2.1')
         self.assertEqual(manifest['id'], 'io.github.ymote.googlecalendar')
         self.assertNotIn('org.octosense.samples.googlecalendar', SOURCE)
         self.assertIn('app://io.github.ymote.googlecalendar/', SOURCE)

@@ -27,7 +27,7 @@
   },
   "id": "io.github.ymote.googlecalendar",
   "integrity": {
-    "bundle_blake3": "0b2268f5161b501bf455d339623feb5bdb14b188d22de8ff6c395baa4ab0e760"
+    "bundle_blake3": "515edb6edadc436630e7b333052b595c755230ad0a09710945020a22fcd074b4"
   },
   "name": "Google Calendar",
   "network": {
@@ -39,5 +39,5 @@
     "agent_workspace": "none",
     "max_bytes": 1048576
   },
-  "version": "0.2.0"
+  "version": "0.2.1"
 }

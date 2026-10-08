@@ -4,7 +4,7 @@ English | [简体中文](README.zh-CN.md)
 
 A **macOS developer preview** to view a bounded Google agenda, keep event drafts, review changes in the host and discuss a selected event with a read-only assistant.
 Publisher: [ymote](https://github.com/ymote). Fresh app ID: `io.github.ymote.googlecalendar`;
-editable version: **0.2.0**. This is an independent sample, not a Google product.
+editable version: **0.2.1**. This is an independent sample, not a Google product.
 
 The new app uses GitHub release attestations; no developer signing key or
 repository signing secret is required. It is a separate install from
@@ -91,4 +91,4 @@ Read [Privacy](PRIVACY.md) before connecting an account or enabling AI.
 [Support](https://github.com/ymote/octosense-google-calendar/issues) is public: do not post private
 messages, events, credentials or raw logs. [Apache-2.0](LICENSE).
 
-Current source check: [native offline receipt](review/releases/0.2.0/NATIVE.json), [gate](review/releases/0.2.0/GATE.txt), [eight review answers](review/ANSWERS.md).
+Current source check: [0.2.1 preparation](review/releases/0.2.1/PREPARATION.json), [gate](review/releases/0.2.1/GATE.txt), [eight review answers](review/ANSWERS.md). The unchanged UI has [0.2.0 offline evidence](review/releases/0.2.0/NATIVE.json) and [genuine release installation evidence](review/releases/0.2.0/PUBLISHING.json); those retain their exact tested version. The 0.2.1 workflow corrects the admission wording; its genuine update acceptance is recorded separately after publication.
